@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CLIENT_SECRETS='/path/to/client_secrets.json'
+DOCKER_SOCKET='/var/run/docker.sock'
+GAM_IMAGE='broadinstitute/gam:latest'
+OAUTH2_SERVICE='/path/to/oauth2service.json'
+OAUTH2='/path/to/oauth2.txt'
