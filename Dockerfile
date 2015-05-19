@@ -7,7 +7,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && \
     apt-get -yq upgrade && \
-    apt-get install -yq python wget python-openssl && \
+    apt-get install -yq python python-openssl python-setuptools wget && \
+    easy_install six && \
     mkdir /gam && \
     touch /gam/nobrowser.txt /gam/noupdatecheck.txt && \
     cd /tmp && \
