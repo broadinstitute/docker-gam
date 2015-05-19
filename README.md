@@ -54,4 +54,4 @@ of the container context to prevent misues.
 
 ### Base Image
 
-Built using the DockerHub base [Ubuntu][https://registry.hub.docker.com/u/library/ubuntu/] 14.04 image
+Built using the DockerHub base [Ubuntu](https://registry.hub.docker.com/u/library/ubuntu/) 14.04 image
