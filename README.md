@@ -1,6 +1,8 @@
 [![Docker Hub](http://img.shields.io/badge/docker-hub-brightgreen.svg?style=flat)](https://registry.hub.docker.com/u/broadinstitute/gam/)
 
-# Docker Image for Dito GAM (https://github.com/jay0lee/GAM)
+# Docker Image for Dito GAM
+
+https://github.com/jay0lee/GAM
 
 ## Setting up tokens for GAM
 
