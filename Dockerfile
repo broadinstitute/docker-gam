@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Andrew Teixeira <teixeira@broadinstitute.org>
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    GAM_VERSION=3.43a
+    GAM_VERSION=3.44
 
 RUN apt-get update && \
     apt-get -yq upgrade && \
