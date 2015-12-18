@@ -1,6 +1,7 @@
-[![Docker Hub](http://img.shields.io/badge/docker-hub-brightgreen.svg?style=flat)](https://registry.hub.docker.com/u/broadinstitute/gam/)
-
 # Docker Image for Dito GAM
+[![Docker Hub](http://img.shields.io/badge/docker-hub-brightgreen.svg?style=flat)](https://registry.hub.docker.com/u/broadinstitute/gam/)
+[![](https://badge.imagelayers.io/broadinstitute/gam:latest.svg)](https://imagelayers.io/?images=broadinstitute/gam:3.61 'Get your own badge on imagelayers.io')
+[![Docker Hub](http://img.shields.io/docker/pulls/broadinstitute/gam.svg)](https://registry.hub.docker.com/u/broadinstitute/gam/)
 
 https://github.com/jay0lee/GAM
 
@@ -54,4 +55,4 @@ of the container context to prevent misues.
 
 ### Base Image
 
-Built using the DockerHub base [Ubuntu](https://registry.hub.docker.com/u/library/ubuntu/) 14.04 image
+Built using the DockerHub base [Alpine](https://hub.docker.com/r/library/alpine/) 3.2 image
