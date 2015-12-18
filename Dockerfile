@@ -5,11 +5,9 @@ ENV GAM_VERSION=3.61
 ADD gam-runner.sh /usr/bin/gam.sh
 
 RUN apk update && \
-    apk add bash gcc libffi-dev musl-dev openssl-dev python python-dev py-pip wget && \
+    apk add bash python py-crypto py-openssl py-pip wget && \
     pip install -U pip && \
-    pip install -U pyOpenSSL && \
     pip install -U six && \
-    apk del gcc libffi-dev musl-dev openssl-dev python-dev && \
     mkdir /gam && \
     touch /gam/nobrowser.txt /gam/noupdatecheck.txt && \
     cd /tmp && \
