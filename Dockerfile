@@ -1,27 +1,23 @@
-FROM ubuntu:14.04
+FROM alpine:3.2
 
-MAINTAINER Andrew Teixeira <teixeira@broadinstitute.org>
-
-ENV DEBIAN_FRONTEND=noninteractive \
-    GAM_VERSION=3.45
-
-RUN apt-get update && \
-    apt-get -yq upgrade && \
-    apt-get install -yq python python-openssl python-setuptools wget && \
-    easy_install six && \
-    mkdir /gam && \
-    touch /gam/nobrowser.txt /gam/noupdatecheck.txt && \
-    cd /tmp && \
-    wget https://github.com/jay0lee/GAM/archive/v$GAM_VERSION.tar.gz && \
-    tar -C /gam --strip-components=1 -zxf /tmp/v$GAM_VERSION.tar.gz && \
-    rm -f /tmp/v$GAM_VERSION.tar.gz && \
-    apt-get -yq clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/* && \
-    rm -rf /var/tmp/*
+ENV GAM_VERSION=3.61
 
 ADD gam-runner.sh /usr/bin/gam.sh
 
-RUN chmod 0755 /usr/bin/gam.sh
+RUN apk update && \
+    apk add bash python py-openssl py-pip wget && \
+    pip install -U pip && \
+    pip install -U six && \
+    mkdir /gam && \
+    touch /gam/nobrowser.txt /gam/noupdatecheck.txt && \
+    cd /tmp && \
+    wget --no-check-certificate https://github.com/jay0lee/GAM/archive/v$GAM_VERSION.tar.gz && \
+    tar -C /gam -zxf /tmp/v$GAM_VERSION.tar.gz && \
+    cd /gam && mv GAM-${GAM_VERSION}/* . && \
+    rm -rf /gam/GAM-${GAM_VERSION} && \
+    chmod 0755 /usr/bin/gam.sh && \
+    rm -rf /var/cache/* && \
+    rm -rf /tmp/* && \
+    rm -rf /var/tmp/*
 
 WORKDIR /gam
