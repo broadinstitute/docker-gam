@@ -9,7 +9,7 @@ RUN apk update && \
     pip install -U pip && \
     pip install -U six && \
     mkdir /gam && \
-    touch /gam/nobrowser.txt /gam/noupdatecheck.txt && \
+    touch /gam/src/nobrowser.txt /gam/src/noupdatecheck.txt && \
     cd /tmp && \
     wget --no-check-certificate https://github.com/jay0lee/GAM/archive/v$GAM_VERSION.tar.gz && \
     tar -C /gam -zxf /tmp/v$GAM_VERSION.tar.gz && \

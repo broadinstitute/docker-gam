@@ -17,7 +17,7 @@ if [ `uname -s` != "Darwin" ]; then
 fi
 
 $SUDO docker run $TTY --rm \
-    -v $CLIENT_SECRETS:/gam/client_secrets.json:ro \
-    -v $OAUTH2:/gam/oauth2.txt \
-    -v $OAUTH2_SERVICE:/gam/oauth2service.json:ro \
+    -v $CLIENT_SECRETS:/gam/src/client_secrets.json:ro \
+    -v $OAUTH2:/gam/src/oauth2.txt \
+    -v $OAUTH2_SERVICE:/gam/src/oauth2service.json:ro \
     $GAM_IMAGE $@
