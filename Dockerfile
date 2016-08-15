@@ -22,9 +22,9 @@ RUN apk update && \
 
 WORKDIR /gam
 
-ENTRYPOINT [ '/usr/bin/gam.sh' ]
+ENTRYPOINT [ "/usr/bin/gam.sh" ]
 
-CMD [ '--help' ]
+CMD [ "--help" ]
 
 ARG VCS_REF
 
