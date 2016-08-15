@@ -1,6 +1,6 @@
 FROM alpine:3.2
 
-ENV GAM_VERSION=3.61
+ENV GAM_VERSION=3.62
 
 ADD gam-runner.sh /usr/bin/gam.sh
 
@@ -21,3 +21,8 @@ RUN apk update && \
     rm -rf /var/tmp/*
 
 WORKDIR /gam
+
+ARG VCS_REF
+
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url="https://github.com/broadinstitute/docker-gam"

@@ -1,7 +1,7 @@
 # Docker Image for Dito GAM
-[![Docker Hub](http://img.shields.io/badge/docker-hub-brightgreen.svg?style=flat)](https://registry.hub.docker.com/u/broadinstitute/gam/)
-[![](https://badge.imagelayers.io/broadinstitute/gam:latest.svg)](https://imagelayers.io/?images=broadinstitute/gam:3.61 'Get your own badge on imagelayers.io')
-[![Docker Hub](http://img.shields.io/docker/pulls/broadinstitute/gam.svg)](https://registry.hub.docker.com/u/broadinstitute/gam/)
+[![](https://images.microbadger.com/badges/image/broadinstitute/gam.svg)](http://microbadger.com/images/broadinstitute/gam "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/broadinstitute/gam.svg)](https://hub.docker.com/r/broadinstitute/gam/)
+[![Docker Hub](http://img.shields.io/docker/pulls/broadinstitute/gam.svg)](https://hub.docker.com/r/broadinstitute/gam/)
 
 https://github.com/jay0lee/GAM
 
