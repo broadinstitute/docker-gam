@@ -22,6 +22,10 @@ RUN apk update && \
 
 WORKDIR /gam
 
+ENTRYPOINT [ '/usr/bin/gam.sh' ]
+
+CMD [ '--help' ]
+
 ARG VCS_REF
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
