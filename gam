@@ -20,4 +20,4 @@ $SUDO docker run $TTY --rm \
     -v $CLIENT_SECRETS:/gam/src/client_secrets.json:ro \
     -v $OAUTH2:/gam/src/oauth2.txt \
     -v $OAUTH2_SERVICE:/gam/src/oauth2service.json:ro \
-    $GAM_IMAGE $@
+    $GAM_IMAGE "$@"
