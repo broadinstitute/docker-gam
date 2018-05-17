@@ -1,6 +1,6 @@
 FROM alpine:3.7
 
-ENV GAM_VERSION=4.22
+ENV GAM_VERSION=4.23
 
 COPY gam-runner.sh /usr/bin/gam.sh
 
