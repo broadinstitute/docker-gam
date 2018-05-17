@@ -3,21 +3,22 @@
 SUDO=
 TTY=
 
-SCRIPT_DIR="$( cd -P "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
+SCRIPT_DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# shellcheck source=/dev/null
 source "${SCRIPT_DIR}/config.sh"
 
-if [ "$TERM" != "dumb" ] ; then
+if [ "${TERM}" != 'dumb' ] ; then
     TTY='-it'
 fi
 
-if [ `uname -s` != "Darwin" ]; then
+if [ "$(uname -s)" != 'Darwin' ]; then
     if [ ! -w "${DOCKER_SOCKET}" ]; then
         SUDO='sudo'
     fi
 fi
 
 $SUDO docker run $TTY --rm \
-    -v $CLIENT_SECRETS:/gam/src/client_secrets.json:ro \
-    -v $OAUTH2:/gam/src/oauth2.txt \
-    -v $OAUTH2_SERVICE:/gam/src/oauth2service.json:ro \
-    $GAM_IMAGE "$@"
+    -v "${CLIENT_SECRETS}:/gam/src/client_secrets.json:ro" \
+    -v "${OAUTH2}:/gam/src/oauth2.txt" \
+    -v "${OAUTH2_SERVICE}:/gam/src/oauth2service.json:ro" \
+    "${GAM_IMAGE}" "$@"
