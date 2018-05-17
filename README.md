@@ -2,6 +2,7 @@
 [![](https://images.microbadger.com/badges/image/broadinstitute/gam.svg)](http://microbadger.com/images/broadinstitute/gam "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/broadinstitute/gam.svg)](https://hub.docker.com/r/broadinstitute/gam/)
 [![Docker Hub](http://img.shields.io/docker/pulls/broadinstitute/gam.svg)](https://hub.docker.com/r/broadinstitute/gam/)
+[![Docker Repository on Quay](https://quay.io/repository/broadinstitute/gam/status "Docker Repository on Quay")](https://quay.io/repository/broadinstitute/gam)
 
 https://github.com/jay0lee/GAM
 
