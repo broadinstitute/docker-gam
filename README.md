@@ -22,11 +22,11 @@ Make sure the `client_secrets.json` and `oauth2service.json` files have been cre
 
 ```sh
 sudo docker run -it --rm \
-  -v /path/to/client_secrets.json:/gam/client_secrets.json:ro \
-  -v /path/to/oauth2.txt:/gam/oauth2.txt \
-  -v /path/to/oauth2service.json:/gam/oauth2service.json:ro \
+  -v /path/to/client_secrets.json:/gam/src/client_secrets.json:ro \
+  -v /path/to/oauth2.txt:/gam/src/oauth2.txt \
+  -v /path/to/oauth2service.json:/gam/src/oauth2service.json:ro \
   broadinstitute/gam:latest \
-  /usr/bin/gam.sh info domain
+  info domain
 ```
 
 The GitHub repository ([https://github.com/broadinstitute/docker-gam](https://github.com/broadinstitute/docker-gam)) for this container also contains a `gam` script with an accompanying `config.sh` script that can be used to more easily run this container as you would run GAM normally without a container.
