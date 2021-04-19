@@ -1,13 +1,11 @@
-FROM alpine:3.7
+FROM python:3.8.8-alpine3.13
 
-ENV GAM_VERSION=4.40
+ENV GAM_VERSION=6.01
 
 COPY gam-runner.sh /usr/bin/gam.sh
 
 RUN apk update \
-    && apk add bash curl python py-crypto py-openssl py-pip \
-    && pip install -U pip \
-    && pip install -U six \
+    && apk add --no-cache bash curl \
     && mkdir /gam \
     && cd /tmp \
     && curl -L -o /tmp/v$GAM_VERSION.tar.gz https://github.com/jay0lee/GAM/archive/v$GAM_VERSION.tar.gz \
