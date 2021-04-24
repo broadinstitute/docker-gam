@@ -41,4 +41,4 @@ Storing these JSON files inside the container is a *VERY BAD* idea, since anyone
 
 ### Base Image
 
-Built using the DockerHub base [Alpine](https://hub.docker.com/r/library/alpine/) 3.7 image
+Built using the DockerHub base [Python](https://hub.docker.com/_/python) 3.8 image
